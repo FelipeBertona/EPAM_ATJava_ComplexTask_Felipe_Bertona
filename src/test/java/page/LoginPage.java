@@ -60,7 +60,7 @@ public class LoginPage extends AbstractPage {
     }
 
     /**
-     * Opens the Login Page and maximizes the browser window.
+     * Opens the Login Page.
      *
      * @return Current LoginPage instance.
      */
@@ -68,7 +68,6 @@ public class LoginPage extends AbstractPage {
     public LoginPage openPage() {
         logger.info("Navigating to URL: " + PAGE_URL);
         driver.get(PAGE_URL);
-        driver.manage().window().maximize();
         return this;
     }
 
@@ -120,7 +119,7 @@ public class LoginPage extends AbstractPage {
         loginButton.click();
         try {
             logger.info("Trying to login...");
-            WebElement title = new WebDriverWait(this.driver, Duration.of(this.WAIT_TIMEOUT_SECONDS, ChronoUnit.SECONDS))
+            new WebDriverWait(this.driver, Duration.of(this.WAIT_TIMEOUT_SECONDS, ChronoUnit.SECONDS))
                     .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='app_logo']")));
             logger.info("Login successful");
             return new InventoryPage(driver);

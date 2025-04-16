@@ -1,16 +1,11 @@
 package page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.time.Duration;
-import java.time.temporal.ChronoUnit;
-import java.util.List;
 
 /**
  * Represents the Inventory Page of the SauceDemo web application.
@@ -44,7 +39,7 @@ public class InventoryPage extends AbstractPage {
     }
 
     /**
-     * Opens the Inventory Page and maximizes the browser window.
+     * Opens the Inventory Page.
      *
      * @return the current instance of {@link InventoryPage}
      */
@@ -52,7 +47,6 @@ public class InventoryPage extends AbstractPage {
     public InventoryPage openPage() {
         logger.info("Navigating to URL: " + PAGE_URL);
         driver.get(PAGE_URL);
-        driver.manage().window().maximize();
         return this;
     }
 

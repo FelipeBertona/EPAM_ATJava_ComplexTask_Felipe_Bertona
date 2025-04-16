@@ -8,7 +8,7 @@ public class CucumberHooks {
 
     @Before
     public void setUp() {
-        DriverSingleton.getDriver();
+        DriverSingleton.getDriver().manage().window().maximize();
     }
 
     @After
