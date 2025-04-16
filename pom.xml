@@ -68,13 +68,18 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.3</version>
                 <configuration>
-                    <parallel>methods</parallel>
-                    <threadCount>3</threadCount>
                     <includes>
-                        <include>
-                            **/TestRunner.java
-                        </include>
+                        <include>**/TestRunnerUC*.java</include>
                     </includes>
+                    <parallel>classes</parallel>
+                    <threadCount>3</threadCount>
+                    <forkCount>3</forkCount>
+                    <reuseForks>false</reuseForks>
+                    <systemPropertyVariables>
+                        <cucumber.execution.parallel.enabled>true</cucumber.execution.parallel.enabled>
+                        <cucumber.execution.parallel.config.strategy>fixed</cucumber.execution.parallel.config.strategy>
+                        <cucumber.execution.parallel.config.fixed.parallelism>3</cucumber.execution.parallel.config.fixed.parallelism>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
