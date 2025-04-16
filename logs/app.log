@@ -1,0 +1,117 @@
+2025-04-16 09:16:09,407 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:16:09,410 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:16:09,807 [main] INFO  page.LoginPage - Entering username: sampleUser
+2025-04-16 09:16:09,911 [main] INFO  page.LoginPage - Entering password: samplePassword
+2025-04-16 09:16:09,986 [main] INFO  page.LoginPage - Clearing the username field
+2025-04-16 09:16:10,092 [main] INFO  page.LoginPage - Clearing the password field
+2025-04-16 09:16:10,239 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:16:13,466 [main] WARN  page.LoginPage - Login failed
+2025-04-16 09:16:13,567 [main] INFO  page.LoginPage - Captured error message: Epic sadface: Username is required
+2025-04-16 09:16:15,201 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:16:15,201 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:16:15,669 [main] INFO  page.LoginPage - Entering username: sampleUser
+2025-04-16 09:16:15,801 [main] INFO  page.LoginPage - Entering password: samplePassword
+2025-04-16 09:16:15,907 [main] INFO  page.LoginPage - Clearing the password field
+2025-04-16 09:16:16,084 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:16:19,290 [main] WARN  page.LoginPage - Login failed
+2025-04-16 09:16:19,316 [main] INFO  page.LoginPage - Captured error message: Epic sadface: Password is required
+2025-04-16 09:16:20,637 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:16:20,637 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:16:21,026 [main] INFO  page.LoginPage - Entering username: standard_user
+2025-04-16 09:16:21,138 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:16:21,341 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:16:21,360 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:16:22,656 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:16:22,656 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:16:23,070 [main] INFO  page.LoginPage - Entering username: problem_user
+2025-04-16 09:16:23,179 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:16:23,389 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:16:23,404 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:16:24,621 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:16:24,621 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:16:25,020 [main] INFO  page.LoginPage - Entering username: performance_glitch_user
+2025-04-16 09:16:25,153 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:16:30,347 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:16:30,360 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:16:31,618 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:16:31,619 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:16:32,003 [main] INFO  page.LoginPage - Entering username: error_user
+2025-04-16 09:16:32,110 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:16:32,330 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:16:32,345 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:16:33,654 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:16:33,654 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:16:34,079 [main] INFO  page.LoginPage - Entering username: visual_user
+2025-04-16 09:16:34,198 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:16:34,418 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:16:34,433 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:20:47,689 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:20:47,692 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:20:50,570 [main] INFO  page.LoginPage - Entering username: sampleUser
+2025-04-16 09:20:50,657 [main] INFO  page.LoginPage - Entering password: samplePassword
+2025-04-16 09:20:50,725 [main] INFO  page.LoginPage - Clearing the username field
+2025-04-16 09:20:50,846 [main] INFO  page.LoginPage - Clearing the password field
+2025-04-16 09:20:51,031 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:20:54,224 [main] WARN  page.LoginPage - Login failed
+2025-04-16 09:20:54,311 [main] INFO  page.LoginPage - Captured error message: Epic sadface: Username is required
+2025-04-16 09:20:55,545 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:20:55,545 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:20:58,095 [main] INFO  page.LoginPage - Entering username: sampleUser
+2025-04-16 09:20:58,190 [main] INFO  page.LoginPage - Entering password: samplePassword
+2025-04-16 09:20:58,266 [main] INFO  page.LoginPage - Clearing the password field
+2025-04-16 09:20:58,408 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:21:01,546 [main] WARN  page.LoginPage - Login failed
+2025-04-16 09:21:01,571 [main] INFO  page.LoginPage - Captured error message: Epic sadface: Password is required
+2025-04-16 09:21:02,809 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:21:02,810 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:21:05,348 [main] INFO  page.LoginPage - Entering username: standard_user
+2025-04-16 09:21:05,443 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:21:05,649 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:21:05,667 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:21:06,825 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:21:06,825 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:21:09,357 [main] INFO  page.LoginPage - Entering username: problem_user
+2025-04-16 09:21:09,470 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:21:09,691 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:21:09,707 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:21:10,911 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:21:10,911 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:21:13,496 [main] INFO  page.LoginPage - Entering username: performance_glitch_user
+2025-04-16 09:21:13,627 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:21:18,826 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:21:18,842 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:21:19,983 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:21:19,983 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:21:22,568 [main] INFO  page.LoginPage - Entering username: error_user
+2025-04-16 09:21:22,658 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:21:22,863 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:21:22,876 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:21:24,072 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:21:24,072 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:21:26,640 [main] INFO  page.LoginPage - Entering username: visual_user
+2025-04-16 09:21:26,750 [main] INFO  page.LoginPage - Entering password: secret_sauce
+2025-04-16 09:21:26,945 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:21:26,958 [main] INFO  page.LoginPage - Login successful
+2025-04-16 09:23:03,401 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:23:03,403 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:23:05,833 [main] INFO  page.LoginPage - Entering username: sampleUser
+2025-04-16 09:23:05,941 [main] INFO  page.LoginPage - Entering password: samplePassword
+2025-04-16 09:23:06,020 [main] INFO  page.LoginPage - Clearing the username field
+2025-04-16 09:23:06,114 [main] INFO  page.LoginPage - Clearing the password field
+2025-04-16 09:23:06,249 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:23:09,463 [main] WARN  page.LoginPage - Login failed
+2025-04-16 09:23:09,575 [main] INFO  page.LoginPage - Captured error message: Epic sadface: Username is required
+2025-04-16 09:23:10,829 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:23:10,829 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:23:13,377 [main] INFO  page.LoginPage - Entering username: sampleUser
+2025-04-16 09:23:13,491 [main] INFO  page.LoginPage - Entering password: samplePassword
+2025-04-16 09:23:13,567 [main] INFO  page.LoginPage - Clearing the password field
+2025-04-16 09:23:13,706 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:23:16,906 [main] WARN  page.LoginPage - Login failed
+2025-04-16 09:23:16,955 [main] INFO  page.LoginPage - Captured error message: Epic sadface: Password is required
+2025-04-16 09:23:18,038 [main] INFO  page.LoginPage - LoginPage initialized
+2025-04-16 09:23:18,038 [main] INFO  page.LoginPage - Navigating to URL: https://www.saucedemo.com/
+2025-04-16 09:23:20,635 [main] INFO  page.LoginPage - Entering username: pp
+2025-04-16 09:23:20,735 [main] INFO  page.LoginPage - Entering password: pp
+2025-04-16 09:23:20,901 [main] INFO  page.LoginPage - Trying to login...
+2025-04-16 09:23:24,091 [main] WARN  page.LoginPage - Login failed
