@@ -67,49 +67,32 @@ public class LoginSteps {
     @Then("I should see the error message {string}")
     public void ShouldSeeErrorMessage(String expectedMessage){
         logger.info("Executing step: I should see the error message '{}'", expectedMessage);
+        assertThat(resultPage)
+                .withFailMessage("Assertion failed in step: I should see the title '%s'. "
+                        + "The page wasn't LoginPage", expectedMessage)
+                .isInstanceOf(LoginPage.class);
 
-        try {
-            assertThat(resultPage).isInstanceOf(LoginPage.class);
-        }
-        catch (Exception e){
-            logger.error("Assertion failed in step: I should see the title '{}'"
-                    + "The page wasn't LoginPage", expectedMessage);
-            throw e;
-        }
-
-        try {
-            String actualMessage = ((LoginPage) resultPage).getErrorMessage();
-            logger.info("Validating error message: Expected '{}', Actual '{}'", expectedMessage, actualMessage);
-            assertThat(actualMessage).isEqualTo(expectedMessage);
-
-        } catch (AssertionError e){
-            logger.error("Assertion failed in step: I should see the error message. "
-                    + "Expected '{}', but got '{}'.", expectedMessage, ((LoginPage) resultPage).getErrorMessage());
-            throw e;
-        }
+        String actualMessage = ((LoginPage) resultPage).getErrorMessage();
+        logger.info("Validating error message: Expected '{}', Actual '{}'", expectedMessage, actualMessage);
+        assertThat(actualMessage)
+                .withFailMessage("Assertion failed in step: I should see the error message. "
+                        + "Expected '%s', but got '%s'.", expectedMessage, actualMessage)
+                .isEqualTo(expectedMessage);
     }
 
     @Then("I should see the title {string}")
     public void ShouldSeeTitle(String expectedTitle) {
         logger.info("Executing step: I should see the title '{}'", expectedTitle);
+        assertThat(resultPage)
+                .withFailMessage("Assertion failed in step: I should see the title '%s'. "
+                        + "The page wasn't InventoryPage", expectedTitle)
+                .isInstanceOf(InventoryPage.class);
 
-        try {
-            assertThat(resultPage).isInstanceOf(InventoryPage.class);
-        }
-        catch (AssertionError e){
-            logger.error("Assertion failed in step: I should see the title '{}'"
-                    + "The page wasn't InventoryPage", expectedTitle);
-            throw e;
-        }
-
-        try {
-            String actualTitle = ((InventoryPage) resultPage).getTitle();
-            logger.info("Validating title: Expected '{}', Actual '{}'", expectedTitle, actualTitle);
-            assertThat(actualTitle).isEqualTo(expectedTitle);
-        } catch (AssertionError e) {
-            logger.error("Assertion failed in step: I should see the title. "
-                    + "Expected '{}', but got '{}'. Error: {}", expectedTitle, ((InventoryPage) resultPage).getTitle(), e.getMessage());
-            throw e;
-        }
+        String actualTitle = ((InventoryPage) resultPage).getTitle();
+        logger.info("Validating title: Expected '{}', Actual '{}'", expectedTitle, actualTitle);
+        assertThat(actualTitle)
+                .withFailMessage("Assertion failed in step: I should see the title. "
+                        + "Expected '%s', but got '%s'.", expectedTitle, actualTitle)
+                .isEqualTo(expectedTitle);
     }
 }
