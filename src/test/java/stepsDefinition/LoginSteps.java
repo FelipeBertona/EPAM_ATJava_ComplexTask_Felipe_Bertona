@@ -1,6 +1,6 @@
 package stepsDefinition;
 
-import driver.DriverSingleton;
+import driver.WebDriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class LoginSteps {
 
-    private final WebDriver driver = DriverSingleton.getDriver();
+    private final WebDriver driver = WebDriverManager.getDriver();
     private LoginPage loginPage;
     private AbstractPage resultPage;
     private static final Logger logger = LoggerFactory.getLogger(LoginSteps.class);

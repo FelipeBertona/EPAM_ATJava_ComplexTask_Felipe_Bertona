@@ -1,6 +1,5 @@
 package driver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,13 +10,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * The browser type can be controlled via the 'browser' system property.
  * Supported browsers: Chrome, Firefox, and Edge. Defaults to Chrome if no browser is specified.
  */
-public class DriverSingleton {
+public class WebDriverManager {
     private static WebDriver driver;
 
     /**
      * Private constructor to prevent instantiation of this singleton class.
      */
-    private DriverSingleton() {}
+    private WebDriverManager() {}
 
     /**
      * Retrieves the instance of the WebDriver.
@@ -35,17 +34,17 @@ public class DriverSingleton {
             // Initialize the WebDriver based on the browser type
             switch (browser) {
                 case "firefox": {
-                    WebDriverManager.firefoxdriver().setup();
+                    io.github.bonigarcia.wdm.WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver(); // Initialize Firefox WebDriver
                     break;
                 }
                 case "edge": {
-                    WebDriverManager.edgedriver().setup();
+                    io.github.bonigarcia.wdm.WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver(); // Initialize Edge WebDriver
                     break;
                 }
                 default: {
-                    WebDriverManager.chromedriver().setup();
+                    io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(); // Default to Chrome WebDriver
                     break;
                 }
