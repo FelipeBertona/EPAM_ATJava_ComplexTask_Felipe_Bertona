@@ -8,7 +8,6 @@ Feature: Sauce Demo Login Tests
 
   @UC1
   Scenario: Test Login form with empty credentials
-    # Enter some credentials first then clear both fields before attempting to login.
     When I enter "sampleUser" into the username field
     And I enter "samplePassword" into the password field
     And I clear both the username and password fields
@@ -17,7 +16,6 @@ Feature: Sauce Demo Login Tests
 
   @UC2
   Scenario: Test Login form with missing password
-    # Enter values then clear only the password field to trigger the missing password error.
     When I enter "sampleUser" into the username field
     And I enter "samplePassword" into the password field
     And I clear the password field
@@ -26,7 +24,6 @@ Feature: Sauce Demo Login Tests
 
   @UC3
   Scenario Outline: Test Login form with valid credentials
-    # Enter valid credentials from the accepted list and validate the dashboard title.
     When I enter "<username>" into the username field
     And I enter "<password>" into the password field
     And I click the login button
