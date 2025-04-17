@@ -1,5 +1,6 @@
 package page;
 
+import driver.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -10,7 +11,7 @@ import org.openqa.selenium.WebDriver;
  * Subclasses must implement the {@link #openPage()} method to define behavior
  * for navigating to specific pages.
  */
-public abstract class AbstractPage {
+public abstract class BasePage {
 
     /**
      * The WebDriver instance used by the page object to interact with the browser.
@@ -23,12 +24,16 @@ public abstract class AbstractPage {
     protected final int WAIT_TIMEOUT_SECONDS = 3;
 
     /**
+     * Base URL of the WebPage.
+     */
+    protected final String BASE_URL = "https://www.saucedemo.com/";
+
+    /**
      * Constructs a new AbstractPage with the provided WebDriver instance.
      *
-     * @param driver the WebDriver instance to be used by the page object
      */
-    protected AbstractPage(WebDriver driver) {
-        this.driver = driver;
+    protected BasePage() {
+        this.driver = WebDriverManager.getDriver();
     }
 
     /**
@@ -36,6 +41,6 @@ public abstract class AbstractPage {
      *
      * @return an instance of the specific implementation class (subclass of AbstractPage)
      */
-    protected abstract AbstractPage openPage();
+    protected abstract BasePage openPage();
 
 }

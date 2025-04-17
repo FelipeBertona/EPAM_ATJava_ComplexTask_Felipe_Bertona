@@ -15,14 +15,9 @@ import java.time.temporal.ChronoUnit;
  * Page object representing the Login Page of the SauceDemo application.
  * Provides methods to interact with and verify the functionality of the login form.
  */
-public class LoginPage extends AbstractPage {
+public class LoginPage extends BasePage {
 
     private static final Logger logger = LoggerFactory.getLogger(LoginPage.class);
-
-    /**
-     * URL of the Login Page.
-     */
-    private final String PAGE_URL = "https://www.saucedemo.com/";
 
     /**
      * Web element representing the username input field.
@@ -50,25 +45,22 @@ public class LoginPage extends AbstractPage {
 
     /**
      * Constructs a LoginPage object and initializes its elements.
-     *
-     * @param driver WebDriver instance used to interact with the browser.
      */
-    public LoginPage(WebDriver driver) {
-        super(driver);
+    public LoginPage() {
+        super();
         PageFactory.initElements(this.driver, this);
         logger.info("LoginPage initialized");
     }
 
     /**
-     * Opens the Login Page and maximizes the browser window.
+     * Opens the Login Page.
      *
      * @return Current LoginPage instance.
      */
     @Override
     public LoginPage openPage() {
-        logger.info("Navigating to URL: " + PAGE_URL);
-        driver.get(PAGE_URL);
-        driver.manage().window().maximize();
+        logger.info("Navigating to URL: " + BASE_URL);
+        driver.get(BASE_URL);
         return this;
     }
 
@@ -116,14 +108,14 @@ public class LoginPage extends AbstractPage {
      *
      * @return An AbstractPage representing the next page.
      */
-    public AbstractPage clickLoginButton() {
+    public BasePage clickLoginButton() {
         loginButton.click();
         try {
             logger.info("Trying to login...");
-            WebElement title = new WebDriverWait(this.driver, Duration.of(this.WAIT_TIMEOUT_SECONDS, ChronoUnit.SECONDS))
+            new WebDriverWait(this.driver, Duration.of(this.WAIT_TIMEOUT_SECONDS, ChronoUnit.SECONDS))
                     .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='app_logo']")));
             logger.info("Login successful");
-            return new InventoryPage(driver);
+            return new InventoryPage();
         } catch (TimeoutException te) {
             logger.warn("Login failed");
             return this;

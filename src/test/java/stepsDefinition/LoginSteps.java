@@ -1,13 +1,11 @@
 package stepsDefinition;
 
-import driver.WebDriverManager;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import page.AbstractPage;
+import page.BasePage;
 import page.InventoryPage;
 import page.LoginPage;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -15,15 +13,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class LoginSteps {
 
-    private final WebDriver driver = WebDriverManager.getDriver();
     private LoginPage loginPage;
-    private AbstractPage resultPage;
+    private BasePage resultPage;
     private static final Logger logger = LoggerFactory.getLogger(LoginSteps.class);
 
     @Given("I navigate to {string}")
     public void NavigateTo(String url){
         logger.info("Executing step: I navigate to '{}'", url);
-        this.loginPage = new LoginPage(driver);
+        this.loginPage = new LoginPage();
         this.loginPage.openPage();
         logger.info("Successfully navigated to '{}'", url);
     }

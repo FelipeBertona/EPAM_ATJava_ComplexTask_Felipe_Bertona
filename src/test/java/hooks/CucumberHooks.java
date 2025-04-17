@@ -8,7 +8,7 @@ public class CucumberHooks {
 
     @Before
     public void setUp() {
-        WebDriverManager.getDriver();
+        WebDriverManager.getDriver().manage().window().maximize();
     }
 
     @After
