@@ -1,6 +1,6 @@
 package page;
 
-import driver.WebDriverManager;
+import driver.WebDriverManagerService;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -14,7 +14,7 @@ public abstract class BasePage {
     protected final String BASE_URL = "https://www.saucedemo.com/";
 
     protected BasePage() {
-        this.driver = WebDriverManager.getDriver();
+        this.driver = WebDriverManagerService.getDriver();
     }
 
     /**

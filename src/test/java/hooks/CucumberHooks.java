@@ -1,6 +1,6 @@
 package hooks;
 
-import driver.WebDriverManager;
+import driver.WebDriverManagerService;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -8,11 +8,11 @@ public class CucumberHooks {
 
     @Before
     public void setUp() {
-        WebDriverManager.getDriver().manage().window().maximize();
+        WebDriverManagerService.getDriver().manage().window().maximize();
     }
 
     @After
     public void tearDown() {
-        WebDriverManager.closeDriver();
+        WebDriverManagerService.closeDriver();
     }
 }
