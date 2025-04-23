@@ -66,18 +66,11 @@ public class LoginPage extends BasePage {
         inputPassword.sendKeys(Keys.DELETE);
     }
 
-    public BasePage clickLoginButton() {
+    public void clickLoginButton() {
+        new WebDriverWait(this.driver, Duration.of(this.WAIT_TIMEOUT_SECONDS, ChronoUnit.SECONDS))
+                .until(ExpectedConditions.elementToBeClickable(loginButton));
+
         loginButton.click();
-        try {
-            logger.info("Trying to login...");
-            new WebDriverWait(this.driver, Duration.of(this.WAIT_TIMEOUT_SECONDS, ChronoUnit.SECONDS))
-                    .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='app_logo']")));
-            logger.info("Login successful");
-            return new InventoryPage();
-        } catch (TimeoutException te) {
-            logger.warn("Login failed");
-            return this;
-        }
     }
 
     public String getErrorMessage() {
