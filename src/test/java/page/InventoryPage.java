@@ -1,10 +1,15 @@
 package page;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 
 /**
  * Inventory Page of the SauceDemo application.
@@ -14,12 +19,8 @@ public class InventoryPage extends BasePage {
 
     private static final Logger logger = LoggerFactory.getLogger(InventoryPage.class);
 
-    @FindBy(xpath = "//div[@class='app_logo']")
-    private WebElement inventoryPage;
-
     public InventoryPage() {
         super();
-        PageFactory.initElements(this.driver, this);
         logger.info("InventoryPage initialized");
     }
 
@@ -31,8 +32,17 @@ public class InventoryPage extends BasePage {
     }
 
     public String getTitle() {
-        String title = inventoryPage.getText();
-        logger.info("Captured InventoryPage title: {}", title);
-        return title;
+        try {
+            WebElement banner = new WebDriverWait(this.driver, Duration.of(this.WAIT_TIMEOUT_SECONDS, ChronoUnit.SECONDS))
+                    .until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//div[@class='app_logo']"))));
+
+            String title = banner.getText();
+
+            logger.info("Captured InventoryPage title: {}", title);
+            return title;
+        } catch (NoSuchElementException e) {
+            logger.error("Failed to locate topBanner element. Likely not on InventoryPage. Exception: {}", e.getMessage());
+            return "Login Failed: Still on Login Page";
+        }
     }
 }
